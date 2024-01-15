@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./css/custom.css">
+
+<body>
+
+    <div class="w3-bar w3-red">
+        <a href="#" class="w3-bar-item w3-button">Home</a>
+        <ol class="w3-right navbarlist" id="pageList">
+            <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">About</a></li>
+            <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">Contact</a></li>
+            <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">Partners</a></li>
+        </ol>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large "
+                    onclick="myFunction()">&#9776;</a></li>
+        
+    </div>
+
+    <div id="demo" class="w3-sidebar w3-red w3-hide w3-hide-large" style="width:25%;right:0">
+        <ol class="navbarlist" id="mobilePageList">
+
+        </ol>
+        <script>
+            let ogList = document.getElementById("pageList");
+            let newList = document.getElementById("mobilePageList");
+
+            ogList.querySelectorAll('li').forEach(item => {
+    const clonedItem = item.cloneNode(true);
+    clonedItem.classList.remove("w3-hide-small","w3-hide-medium","navitem");
+    newList.appendChild(clonedItem);
+  });
+
+        </script>
+    </div>
+
+    <div class="w3-container">
+        <p>In the example, the navigation bar is replaced with a button (☰) in the top right corner when shown on
+            tablets and mobile devices. When the button is clicked, the links in the bar will vertically stack.</p>
+        <p>Resize the screen to see the effect.</p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

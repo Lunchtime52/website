@@ -1,0 +1,14 @@
+.navbarlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navitem{
+        display: inline;
+}
+.navbar{
+        padding: 0 20%;
+}
+.margincenter{
+margin-right: 50px;
+}
