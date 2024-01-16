@@ -7,18 +7,20 @@
 
 <body>
 
+    <!-- Main Navbar -->
     <div class="w3-bar w3-red">
         <a href="#" class="w3-bar-item w3-button">Home</a>
         <ol class="w3-right navbarlist" id="pageList">
             <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">About</a></li>
             <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">Contact</a></li>
-            <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">Partners</a></li>
+            <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">Partners</a>
+            </li>
         </ol>
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large "
-                    onclick="myFunction()">&#9776;</a></li>
-        
-    </div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large "
+            onclick="myFunction()">&#9776;</a></li>
+ </div>
 
+    <!-- Mobile Navabar -->
     <div id="demo" class="w3-sidebar w3-red w3-hide w3-hide-large" style="width:25%;right:0">
         <ol class="navbarlist" id="mobilePageList">
 
@@ -28,21 +30,24 @@
             let newList = document.getElementById("mobilePageList");
 
             ogList.querySelectorAll('li').forEach(item => {
-    const clonedItem = item.cloneNode(true);
-    clonedItem.classList.remove("w3-hide-small","w3-hide-medium","navitem");
-    newList.appendChild(clonedItem);
-  });
-
+                const clonedItem = item.cloneNode(true);
+                clonedItem.classList.remove("w3-hide-small", "w3-hide-medium", "navitem");
+                newList.appendChild(clonedItem);
+            });
         </script>
     </div>
 
+    <!-- Main Content Below -->
     <div class="w3-container">
         <p>In the example, the navigation bar is replaced with a button (☰) in the top right corner when shown on
             tablets and mobile devices. When the button is clicked, the links in the bar will vertically stack.</p>
         <p>Resize the screen to see the effect.</p>
     </div>
 
-    <script>
+    
+
+</body>
+<script>
         function myFunction() {
             var x = document.getElementById("demo");
             if (x.className.indexOf("w3-show") == -1) {
@@ -52,7 +57,4 @@
             }
         }
     </script>
-
-</body>
-
 </html>
