@@ -7,54 +7,94 @@
 
 <body>
 
+
     <!-- Main Navbar -->
-    <div class="w3-bar w3-red">
-        <a href="#" class="w3-bar-item w3-button">Home</a>
-        <ol class="w3-right navbarlist" id="pageList">
-            <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">About</a></li>
-            <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">Contact</a></li>
-            <li class="navitem w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">Partners</a>
+
+    <div class="w3-bar w3-top w3-blue navbar">
+        <a href="#" class="navitem w3-bar-item w3-button">Home</a>
+        <ul class="w3-right w3-ul" id="pageList">
+            <li class=" w3-center w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">About</a>
             </li>
-        </ol>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large "
+            <li class="w3-center w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">Contact</a>
+            </li>
+            <li class="w3-center w3-bar-item  w3-hide-small w3-hide-medium"><a href="#" class="w3-button">Partners</a>
+            </li>
+        </ul>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large navitem "
             onclick="myFunction()">&#9776;</a></li>
- </div>
-
-    <!-- Mobile Navabar -->
-    <div id="demo" class="w3-sidebar w3-red w3-hide w3-hide-large" style="width:25%;right:0">
-        <ol class="navbarlist" id="mobilePageList">
-
-        </ol>
-        <script>
-            let ogList = document.getElementById("pageList");
-            let newList = document.getElementById("mobilePageList");
-
-            ogList.querySelectorAll('li').forEach(item => {
-                const clonedItem = item.cloneNode(true);
-                clonedItem.classList.remove("w3-hide-small", "w3-hide-medium", "navitem");
-                newList.appendChild(clonedItem);
-            });
-        </script>
     </div>
 
-    <!-- Main Content Below -->
-    <div class="w3-container">
-        <p>In the example, the navigation bar is replaced with a button (☰) in the top right corner when shown on
-            tablets and mobile devices. When the button is clicked, the links in the bar will vertically stack.</p>
-        <p>Resize the screen to see the effect.</p>
-    </div>
+    <div id="content">
+        <!-- Mobile Navabar -->
+        <div id="demo" class="w3-sidebar w3-light-blue w3-hide w3-hide-large w3-animate-right "
+            style="width:35%;right:0">
+            <ul class="w3-ul" id="mobilePageList">
+                <script>
+                    let ogList = document.getElementById("pageList");
+                    let newList = document.getElementById("mobilePageList");
 
-    
+                    ogList.querySelectorAll('li').forEach(item => {
+                        const clonedItem = item.cloneNode(true);
+                        clonedItem.classList.remove("w3-hide-small", "w3-hide-medium", "navlistitem");
+                        newList.appendChild(clonedItem);
+                    });
+                </script>
+            </ul>
+        </div>
+
+
+
+<div class="main">
+        <!-- Main Content Below -->
+        <div class="w3-container">
+            <p>In the example, the navigation bar is replaced with a button (☰) in the top right corner when shown on
+                tablets and mobile devices. When the button is clicked, the links in the bar will vertically stack.</p>
+            <p>Resize the screen to see the effect.</p>
+        </div>
+        <div class="w3-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius in cumque laboriosam officiis? Modi quis
+                repellat cupiditate, doloribus possimus blanditiis, sed at sequi aliquam nemo molestiae repellendus vero
+                perspiciatis ullam.</p>
+        </div>
+        <div class="w3-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius in cumque laboriosam officiis? Modi quis
+                repellat cupiditate, doloribus possimus blanditiis, sed at sequi aliquam nemo molestiae repellendus vero
+                perspiciatis ullam.</p>
+        </div>
+        <div class="w3-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius in cumque laboriosam officiis? Modi quis
+                repellat cupiditate, doloribus possimus blanditiis, sed at sequi aliquam nemo molestiae repellendus vero
+                perspiciatis ullam.</p>
+        </div>
+        <div class="w3-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius in cumque laboriosam officiis? Modi quis
+                repellat cupiditate, doloribus possimus blanditiis, sed at sequi aliquam nemo molestiae repellendus vero
+                perspiciatis ullam.</p>
+        </div>
+        <div class="w3-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius in cumque laboriosam officiis? Modi quis
+                repellat cupiditate, doloribus possimus blanditiis, sed at sequi aliquam nemo molestiae repellendus vero
+                perspiciatis ullam.</p>
+        </div>
+        <div class="w3-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius in cumque laboriosam officiis? Modi quis
+                repellat cupiditate, doloribus possimus blanditiis, sed at sequi aliquam nemo molestiae repellendus vero
+                perspiciatis ullam.</p>
+        </div>
+    </div>
+    </div>
 
 </body>
 <script>
-        function myFunction() {
-            var x = document.getElementById("demo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
+    function myFunction() {
+        var x = document.getElementById("demo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.style.display = "block";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
         }
-    </script>
+    }
+</script>
+
 </html>
