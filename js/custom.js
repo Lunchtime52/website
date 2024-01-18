@@ -1,10 +1,10 @@
 const companydata = {
-    "name":"Pixel Dynasty",
-    "slogan":"Web Development for you!",
-    "phone":"865-405-9812",
-    "email":"help@pixeldynasy.dev",
-    "address":"123 something street, City, State Zip"
-
+  name: "Pixel Dynasty",
+  slogan: "Web Development for you!",
+  phone: "865-405-9812",
+  email: "help@pixeldynasy.dev",
+  address: "123 something street, City, State Zip",
+  logo: "/assets/logo.png",
 };
 
 function pageload() {
@@ -12,25 +12,29 @@ function pageload() {
   setVars(companydata);
 }
 
-function setVars(data){
-    document.title = data.name;
+function setVars(data) {
+  document.title = data.name;
 
-const companyElements = document.querySelectorAll('.company-name , .company-slogan , .company-phone , .company-email , .company-address');
-    companyElements.forEach(element => {
-        if (element.classList.contains('company-name')) {
-            element.textContent = data.name;
-          } else if (element.classList.contains('company-slogan')) {
-            element.textContent = data.slogan;
-          } else if (element.classList.contains('company-phone')) {
-            element.textContent = data.phone;
-          } else if (element.classList.contains('company-email')) {
-            element.textContent = data.email;
-          } else if (element.classList.contains('company-address')) {
-            element.textContent = data.address;
-          }
-      });
-
-    
+  const companyElements = document.querySelectorAll(
+    ".company-name , .company-slogan , .company-phone , .company-email , .company-address"
+  );
+  companyElements.forEach((element) => {
+    if (element.classList.contains("company-name")) {
+      element.textContent = data.name;
+    } else if (element.classList.contains("company-slogan")) {
+      element.textContent = data.slogan;
+    } else if (element.classList.contains("company-phone")) {
+      element.textContent = data.phone;
+    } else if (element.classList.contains("company-email")) {
+      element.textContent = data.email;
+    } else if (element.classList.contains("company-address")) {
+      element.textContent = data.address;
+    } else if (element.classList.contains(".company-logo")) {
+      const img = document.createElement("img");
+      img.src = data.logo;
+      logoElement.appendChild(img);
+    }
+  });
 }
 
 function mobilenavbar() {
@@ -57,4 +61,3 @@ function setmobilelinks() {
     newList.appendChild(clonedItem);
   });
 }
-
