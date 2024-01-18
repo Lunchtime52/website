@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/css/custom.css">
+    <link rel="javascript" href="/js/custom.js">
 </head>
 
-<body>
+<body onload="pageload();">
 
 
     <!-- Main Navbar -->
@@ -28,8 +29,7 @@
                     class="w3-button">Partners</a>
             </li>
         </ul>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large navitem "
-            onclick="myFunction()">&#9776;</a></li>
+        <button class="w3-bar-item w3-button w3-right w3-hide-large navitem " onclick="mobilenavbar()">&#9776;</button>
     </div>
 
     <div id="content">
@@ -37,16 +37,7 @@
         <div id="demo" class="w3-sidebar w3-light-blue w3-hide w3-hide-large w3-animate-right "
             style="width:35%;right:0">
             <ul class="w3-ul" id="mobilePageList">
-                <script>
-                    let ogList = document.getElementById("pageList");
-                    let newList = document.getElementById("mobilePageList");
 
-                    ogList.querySelectorAll('li').forEach(item => {
-                        const clonedItem = item.cloneNode(true);
-                        clonedItem.classList.remove("w3-hide-small", "w3-hide-medium", "navlistitem");
-                        newList.appendChild(clonedItem);
-                    });
-                </script>
             </ul>
         </div>
 
@@ -107,16 +98,5 @@
     </div>
 
 </body>
-<script>
-    function myFunction() {
-        var x = document.getElementById("demo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-            x.style.display = "block";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-    }
-</script>
 
 </html>
