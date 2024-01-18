@@ -9,7 +9,7 @@ const companydata = {
 
 function pageload() {
   setmobilelinks();
-  setVars(data);
+  setVars(companydata);
 }
 
 function setVars(data){
