@@ -1,11 +1,36 @@
-const data = {
-    "companyName":"Pixel Dynasty",
+const companydata = {
+    "name":"Pixel Dynasty",
+    "slogan":"Web Development for you!",
+    "phone":"865-405-9812",
+    "email":"help@pixeldynasy.dev",
+    "address":"123 something street, City, State Zip"
 
 };
 
 function pageload() {
   setmobilelinks();
   setVars(data);
+}
+
+function setVars(data){
+    document.title = data.name;
+
+const companyElements = document.querySelectorAll('.company-name','.company-slogan','.company-phone','.company-email','.company-address');
+    companyElements.forEach(element => {
+        if (element.classList.contains('company-name')) {
+            element.textContent = data.name;
+          } else if (element.classList.contains('company-slogan')) {
+            element.textContent = data.slogan;
+          } else if (element.classList.contains('company-phone')) {
+            element.textContent = data.phone;
+          } else if (element.classList.contains('company-email')) {
+            element.textContent = data.email;
+          } else if (element.classList.contains('company-address')) {
+            element.textContent = data.address;
+          }
+      });
+
+    
 }
 
 function mobilenavbar() {
@@ -33,10 +58,3 @@ function setmobilelinks() {
   });
 }
 
-function setVars(data){
-    document.title = data.companyName
-    const companyNameElements = document.querySelectorAll('.company-name');
-    companyNameElements.forEach(element => {
-      element.textContent = data.companyName;
-    });
-}
