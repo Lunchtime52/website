@@ -4,7 +4,7 @@ const companydata = {
   phone: "865-405-9812",
   email: "help@pixeldynasy.dev",
   address: "123 something street, City, State Zip",
-  logo: "/assets/logo.png",
+  logo: "'/assets/logo.png'",
 };
 
 function pageload() {
