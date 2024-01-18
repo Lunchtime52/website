@@ -15,7 +15,7 @@ function pageload() {
 function setVars(data){
     document.title = data.name;
 
-const companyElements = document.querySelectorAll('.company-name','.company-slogan','.company-phone','.company-email','.company-address');
+const companyElements = document.querySelectorAll('.company-name , .company-slogan , .company-phone , .company-email , .company-address');
     companyElements.forEach(element => {
         if (element.classList.contains('company-name')) {
             element.textContent = data.name;
