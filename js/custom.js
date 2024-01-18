@@ -1,3 +1,13 @@
+const data = {
+    "companyName":"Pixel Dynasty",
+
+};
+
+function pageload() {
+  setmobilelinks();
+  setVars(data);
+}
+
 function mobilenavbar() {
   var x = document.getElementById("demo");
   if (x.className.indexOf("w3-show") == -1) {
@@ -6,10 +16,6 @@ function mobilenavbar() {
   } else {
     x.className = x.className.replace(" w3-show", "");
   }
-}
-
-function pageload() {
-  setmobilelinks();
 }
 
 function setmobilelinks() {
@@ -25,4 +31,12 @@ function setmobilelinks() {
     );
     newList.appendChild(clonedItem);
   });
+}
+
+function setVars(data){
+    document.title = data.companyName
+    const companyNameElements = document.querySelectorAll('.company-name');
+    companyNameElements.forEach(element => {
+      element.textContent = data.companyName;
+    });
 }
