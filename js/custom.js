@@ -31,7 +31,7 @@ function setVars(data) {
       element.textContent = data.address;
     } else if (element.classList.contains("company-logo")) {
       const img = document.createElement("img");
-      img.src = data.logo;
+      img.setAttribute(src,data.logo);
       logoElement.appendChild(img);
     }
   });
