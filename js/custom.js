@@ -29,7 +29,7 @@ function setVars(data) {
       element.textContent = data.email;
     } else if (element.classList.contains("company-address")) {
       element.textContent = data.address;
-    } else if (element.classList.contains(".company-logo")) {
+    } else if (element.classList.contains("company-logo")) {
       const img = document.createElement("img");
       img.src = data.logo;
       logoElement.appendChild(img);
