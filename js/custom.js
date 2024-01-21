@@ -29,6 +29,7 @@ function setVars(data) {
       element.textContent = data.email;
     } else if (element.classList.contains("company-address")) {
       element.textContent = data.address;
+      //Logo not working yet
     } else if (element.classList.contains("company-logo")) {
       const img = document.createElement("img");
       img.setAttribute("src",data.logo);
