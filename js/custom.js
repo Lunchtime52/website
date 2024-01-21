@@ -16,7 +16,7 @@ function setVars(data) {
   document.title = data.name;
 
   const companyElements = document.querySelectorAll(
-    ".company-name , .company-slogan , .company-phone , .company-email , .company-address, .company-logo"
+    ".company-name , .company-slogan , .company-phone , .company-email , .company-address"
   );
   companyElements.forEach((element) => {
     if (element.classList.contains("company-name")) {
